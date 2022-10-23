@@ -49,7 +49,47 @@ sp = ''
 if Ndb < 737.62:
     sp = 'MD'
 else:
-    sp = 'unidentify'
+    if Ndb > 1026.04:
+        if Nde > 1403.12:
+            if Ndl > 530.82:
+                if Ndf > 1393.64:
+                    if Ndr > 2945.76:
+                        sp = 'CR'
+                    else:
+                        sp = 'CM'
+                else:
+                    sp = 'CM'
+            else:
+                sp = 'CM'
+        else:
+            if Ndc > 1645.70:
+                if Nda > 1571.80:
+                    sp = 'CR'
+                else:
+                    if Ndh > 1990.58:
+                        if Ndd > 588.76:
+                            sp = 'CN'
+                        else:
+                            sp = 'CM'
+                    else:
+                        sp = 'CM'
+            else:
+                if Ndh > 2133.98:
+                    sp = 'CN'
+                else:
+                    if Ndu > 682.00:
+                        sp = 'CN'
+                    else:
+                        if Nde > 1386.68:
+                            if Ndg > 428.72:
+                                sp = 'CM'
+                            else:
+                                sp = 'CR'
+                        else:
+                            sp = 'CM'
+        
+    else:
+        sp = 'unidentify'
 
 if st.button('Identity'):
      st.write('Your sample is ...')
