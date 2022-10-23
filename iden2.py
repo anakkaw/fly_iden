@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-st.title('Fly Species Identification Software')
+st.title('Fly Species Identification (without Characteristic Feature)')
 st.warning('This software can identify CN, CM, CR, LC, HL, MD and PD')
 
 st.subheader('Instruction:' )
