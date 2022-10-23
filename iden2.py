@@ -48,4 +48,4 @@ sp = ''
 
 if st.button('Identity'):
      st.write('Your sample is ...')
-     st.subheader(NDu)
+     st.subheader(Ndu)
