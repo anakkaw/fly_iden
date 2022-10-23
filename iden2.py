@@ -9,7 +9,7 @@ st.subheader('Please upload sample_coordinate.csv' )
 uploaded_files = st.file_uploader("Choose a CSV file", type='csv')
 
 df = pd.read_csv(uploaded_files)
-df = df.drop('landmark')
+df = df.drop(columns=['landmark'])
 lm_list = df.values.tolist()
 
 sp = ''
