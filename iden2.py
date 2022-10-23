@@ -46,6 +46,11 @@ Ndu = Du*ratio
 
 sp = ''
 
+if Ndb < 737.62:
+    sp = 'MD'
+else:
+    sp = 'unidentify'
+
 if st.button('Identity'):
      st.write('Your sample is ...')
-     st.subheader(Ndu)
+     st.subheader(sp)
