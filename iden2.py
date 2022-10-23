@@ -6,7 +6,7 @@ st.warning('This software can identify CN, CM, CR, LC, HL, MD and PD')
 
 st.subheader('Instruction:' )
 st.write('1. Download sample_coordinate.csv')
-link = '[download](http://github.com)'
+link = '[download](https://drive.google.com/file/d/16XD8QlHhg6PC06p6sVSeiXCMa9WGajAi/view?usp=sharing)'
 st.markdown(link, unsafe_allow_html=True)
 
 uploaded_files = st.file_uploader("Choose a CSV file", type='csv')
