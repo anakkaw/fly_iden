@@ -9,7 +9,7 @@ st.write('1. Download sample_coordinate.csv')
 link = '[download](https://drive.google.com/file/d/16XD8QlHhg6PC06p6sVSeiXCMa9WGajAi/view?usp=sharing)'
 st.markdown(link, unsafe_allow_html=True)
 st.write('2. Input the coordinate of all landmarks of your sample in the csv file')
-st.write('3. Upload the csv file below and the click identify')
+st.write('3. Upload the csv file below and then click identify')
 
 uploaded_files = st.file_uploader("Choose a CSV file", type='csv')
 
