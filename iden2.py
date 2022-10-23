@@ -4,7 +4,7 @@ import pandas as pd
 st.title('Fly Species Identification Software')
 st.warning('This software can identify CN, CM, CR, LC, HL, MD and PD')
 
-st.subheader('Please upload sample_coordinate.csv' )
+st.subheader('Please upload landmark data in csv format' )
 
 uploaded_files = st.file_uploader("Choose a CSV file", type='csv')
 
