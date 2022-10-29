@@ -1,7 +1,7 @@
 import streamlit as st
 
 st.title('Fly Species Identification Software')
-st.warning('This software can identify CN, CM, CR, LC, HL, MD and PD')
+st.warning('This software can identify Chrysomya nigripes, Chrysomya megacephala, Chrysomya rufifacies, Lucilia cuprina, Hemipyrellia ligurriens, Musca domestica and Parasarcophaga dux')
 
 st.subheader('Please input your sample morphological character' )
 
@@ -28,29 +28,29 @@ Nde = De*ratio
 Ndg = Dg*ratio
 
 if body == 'cuprous':
-     sp = 'LC'
+     sp = 'Lucilia cuprina'
 elif body == 'grey':
      if Ndb > 738.44:
-          sp = 'PD'
+          sp = 'Parasarcophaga dux'
      else:
-          sp = 'MD'
+          sp = 'Musca domestica'
 else:
      if gena == 'orange':
-          sp = 'CM'
+          sp = 'Chrysomya megacephala'
      else:
           if Nde > 1386.86:
                if Nda > 1409.28:
-                    sp ='CR'
+                    sp ='Chrysomya rufifacies'
                else:
-                    sp ='HL'
+                    sp ='Hemipyrellia ligurriens'
           else:
                if Ndg > 455.16:
-                    sp = 'HL'
+                    sp = 'Hemipyrellia ligurriens'
                else:
                     if Nda >1564:
-                         sp ='CR'
+                         sp ='Chrysomya rufifacies'
                     else:
-                         sp = 'CN'
+                         sp = 'Chrysomya nigripes'
 
 if st.button('Identity'):
      st.write('Your sample is ...')
