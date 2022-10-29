@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 st.title('Fly Species Identification (without Characteristic Feature)')
-st.warning('This software can identify CN, CM, CR, LC, HL, MD and PD')
+st.warning('This software can identify Chrysomya nigripes, Chrysomya megacephala, Chrysomya rufifacies, Lucilia cuprina, Hemipyrellia ligurriens, Musca domestica and Parasarcophaga dux')
 
 st.subheader('Instruction:' )
 st.write('1. Download sample_coordinate.csv')
@@ -52,67 +52,67 @@ Ndu = Du*ratio
 sp = ''
 
 if Ndb < 737.62:
-    sp = 'MD'
+    sp = 'Musca domestica'
 else:
     if Ndb > 1026.04:
         if Nde > 1403.12:
             if Ndl > 530.82:
                 if Ndf > 1393.64:
                     if Ndr > 2945.76:
-                        sp = 'CR'
+                        sp = 'Chrysomya rufifacies'
                     else:
-                        sp = 'CM'
+                        sp = 'Chrysomya megacephala'
                 else:
-                    sp = 'CM'
+                    sp = 'Chrysomya megacephala'
             else:
-                sp = 'CM'
+                sp = 'Chrysomya megacephala'
         else:
             if Ndc > 1645.70:
                 if Nda > 1571.80:
-                    sp = 'CR'
+                    sp = 'Chrysomya rufifacies'
                 else:
                     if Ndh > 1990.58:
                         if Ndd > 588.76:
-                            sp = 'CN'
+                            sp = 'Chrysomya nigripes'
                         else:
-                            sp = 'CM'
+                            sp = 'Chrysomya megacephala'
                     else:
-                        sp = 'CM'
+                        sp = 'Chrysomya megacephala'
             else:
                 if Ndh > 2133.98:
-                    sp = 'CN'
+                    sp = 'Chrysomya nigripes'
                 else:
                     if Ndu > 682.00:
-                        sp = 'CN'
+                        sp = 'Chrysomya nigripes'
                     else:
                         if Nde > 1386.68:
                             if Ndg > 428.72:
-                                sp = 'CM'
+                                sp = 'Chrysomya megacephala'
                             else:
-                                sp = 'CR'
+                                sp = 'Chrysomya rufifacies'
                         else:
-                            sp = 'CM'
+                            sp = 'Chrysomya megacephala'
         
     else:
         if Ndg > 393.34:
             if Ndc > 1656.34:
                 if Nde > 1432.80:
-                    sp = 'PD'
+                    sp = 'Parasarcophaga dux'
                 else:
                     if Ndd > 653.36:
                         if Ndg > 650.70:
-                            sp = 'PD'
+                            sp = 'Parasarcophaga dux'
                         else:
                             if Nds > 1335.14:
-                                sp = 'HL'
+                                sp = 'Hemipyrellia ligurriens'
                             else:
-                                sp = 'LC'
+                                sp = 'Lucilia cuprina'
                     else:
-                        sp = 'PD'
+                        sp = 'Parasarcophaga dux'
             else:
-                sp = 'CM'
+                sp = 'Chrysomya megacephala'
         else:
-            sp = 'CN'
+            sp = 'Chrysomya nigripes'
 
 if st.button('Identity'):
      st.write('Your sample is ...')
